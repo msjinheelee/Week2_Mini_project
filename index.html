@@ -1,3 +1,21 @@
+<!-- GIVEN I need to sample a potential employee's previous work
+WHEN I load their portfolio
+1. THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them  -- yes
+WHEN I click one of the links in the navigation
+2. THEN the UI scrolls to the corresponding section  -- no
+WHEN I click on the link to the section about their work
+3. THEN the UI scrolls to a section with titled images of the developer's applications  -- ??
+WHEN I am presented with the developer's first application
+4. THEN that application's image should be larger in size than the others  --??
+WHEN I click on the images of the applications
+5.  THEN I am taken to that deployed application
+WHEN I resize the page or view the site on various screens and devices
+6.  THEN I am presented with a responsive layout that adapts to my viewport  -- yes
+
+``` -->
+
+
+
 <!DOCTYPE html>
 <html lang="en-us">
 
@@ -5,190 +23,114 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta description="Jinhee Lee Solution Services">
-    <title>Land of Jinhee Lee</title>
+    <meta description="Welcome to Jinhee Lee">
+    <title>Welcome to Jinhee Lee</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <header>
     <div class="header">
-        <h1>Jin<span class="seo">h</span>ee Lee</h1>
-        <div>
+        <h1 class="name">Jin<span class="seo">h</span>ee Lee</h1>
+        <div class="nav">
             <ul>
                 <li>
-                    <a href="#search-engine-optimization">About Me</a>
+                    <a href="#about-me">About Me</a>
                 </li>
                 <li>
-                    <a href="#online-reputation-management">Work</a>
+                    <a href="#work">Work</a>
                 </li>
                 <li>
-                    <a href="#social-media-marketing">Contact Me</a>
+                    <a href="#footer-contact">Contact Me</a>
                 </li>
-                <li>
-                    <a href="#social-media-marketing">Resume</a>
-                </li>
+            
             </ul>
         </div>
     </div>
     </header>
 
     <main>
-        <div class="hero" alt="people having a meeting"></div>
+        <section>
+        <div class="about-me">
+            <img src="./assets/images/hero_image_2.png" alt="various analytics" class="hero-image"/>
+           
+            <h2><u>About Me</u></h2><br>
+            <img src="./assets/images/image-me_1.jpg" alt="photo of me" class="small-photo cord-card">
+            <p>Passionate about data storytelling and a true game lover with a wealth of experience in A/B test performance analysis, e-commerce funnel metrics, market research, online user behaviour analysis and global digital operations. </p>
+        </div>
+        
+        <div class="work">
+            <h2><u>Work</u></h2><br>
+        </div>
+
+        </section>
         <section class="row justify-center">
     
           <div class="card-column">
             <figure class="card code-card">
-              <h2 class="card-header">Flexbox Row</h2>
+              <h2 class="card-header">A/B test</h2>
               <div class="card-body">
-                <p>Use these three properties to create a Flexbox row layout.</p>
+                <p>Managed Online Sales A/B test projects end-to-end, resulting in a 31% uplift in the baseline conversion rate across 61 A/B experiments in a fiscal year.</p>
               </div>
-              <!-- with the <pre> element, it counts all spaces literally, so proper code indentation cannot be applied in this case -->
-              <pre class="code-block"><code>.row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }</code></pre>
+              
             </figure>
           </div>
     
     
           <div class="card-column">
             <figure class="card code-card">
-              <h2 class="card-header">Flexbox Column</h2>
+              <h2 class="card-header">E-Commerce</h2>
               <div class="card-body">
-                <p>Use this to create a Flexbox column layout.</p>
+                <p>Developed the online sales funnel metrics and attain a wealth of knowledge in online user behavior.</p>
               </div>
-              <pre class="code-block"><code>.column {
-      display: flex;
-      flex-direction: column
-    }</code></pre>
+              
             </figure>
           </div>
     
           <div class="card-column">
             <figure class="card code-card">
-              <h2 class="card-header">CSS Grid Layout</h2>
+              <h2 class="card-header">User Behaviour</h2>
               <div class="card-body">
-                <p>Build a 12-column layout using CSS Grid</p>
+                <p>Established and host a weekly forum ‘Behavioural Economics Academy’, showcasing various live and planned experiments across the businesses. </p>
               </div>
-              <pre class="code-block"><code>.grid {
-      display: grid;
-      width: 100%;
-      grid-template-columns: repeat(12, 1fr);
-    }</code></pre>
+              
             </figure>
           </div>
-          <div class="card-column">
-            <figure class="card code-card">
-              <h2 class="card-header">Linear Gradients</h2>
-              <div class="card-body">
-                <p>This will create a background linear gradient from top to bottom.</p>
-              </div>
-              <pre class="code-block"><code>.linear-gradient-background {
-      background-image: linear-gradient(
-        rgba(232, 102, 236, 0.3) 0%,
-        rgba(232, 102, 236, 0.6) 100%
-      );
-    }</code></pre>
-            </figure>
-          </div>
-          <div class="card-column">
-            <figure class="card code-card">
-              <h2 class="card-header">Box Transition Glow</h2>
-              <div class="card-body">
-                <p>Use transition and box shadows to glow on hover.</p>
-              </div>
-              <pre class="code-block"><code>.code-card .card-header {
-      border-radius: 8px;
-      transition: all 0.5s ease-in-out;
-    }
-    
-    .code-card:hover,
-    .code-card:hover .card-header {
-      box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
-    }</code></pre>
-            </figure>
-          </div>
-    
-          <div class="card-column">
-            <figure class="card code-card">
-              <h2 class="card-header">Overlay Card with Title</h2>
-              <div class="card-body">
-                <p>Use position properties and negative margins to raise elements higher than their natural starting point.
-                </p>
-              </div>
-              <pre class="code-block"><code>.card-header {
-      position: relative;
-      margin-top: -20px;
-    }</code></pre>
-            </figure>
-          </div>
+        
+        
         </section>
       </main>
 
 
-    <!-- <main>
-    <section>
-    <div class="hero" alt="people having a meeting"></div>
-    <div class="content">
-        <div class="about-me">
-            <!-- <img src="./assets/images/hero_image_2.png" alt="analytics photo" class="float-left" /> -->
-    
-            <!-- <h2>About Me</h2>
-            <p span="details">
-                The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
-            </p>
-        </div>
-        <div id="online-reputation-management" class="online-reputation-management">
-            <img src="./assets/images/online-reputation-management.jpg" alt="reputation chart showing on the laptop monitor" class="float-right" />
-            <h2>Online Reputation Management</h2>
-            <p>
-                The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.
-            </p>
-        </div>
-        <div id="social-media-marketing" alt="variety of social media names" class="social-media-marketing">
-            <img src="./assets/images/social-media-marketing.jpg" class="float-left" />
-            <h2>Social Media Marketing</h2>
-            <p>
-                Social media continues to have a sizable influence on buying habits. Social media marketing helps you determine which platforms are suited to your brand, using analytics to find the right markets and increase your lead generation.
-            </p>
-        </div>
-    </div> -->
-    <!-- <div class="benefits">
-        <div class="benefit-lead">
-            <h3>Lead Generation</h3>
-            <img src="./assets/images/lead-generation.png" alt="idea funnel">
-            <p>
-                Inbound strategies for lead generation require less work for your business, bringing customers directly to your website.
-            </p>
-        </div>
-        <div class="benefit-brand">
-            <h3>Brand Awareness</h3>
-            <img src="./assets/images/brand-awareness.png" alt="lightbulb">
-            <p>
-                Users find your business through paid and organic searches, increasing the search ranking and visibility for your business.
-            </p>
-        </div>
-        <div class="benefit-cost">
-            <h3>Cost Management</h3>
-            <img src="./assets/images/cost-management.png" alt="money icon">
-            <p>
-                As the search ranking for your business increases, your advertising costs decrease, and you no longer need to advertise your page.
-            </p>
-        </div>
-    </div>
-    </section>
-</main> --> -->
-
     <footer>
-    <div class="footer">
-        <h2>Made with ❤️️ by Horiseon</h2>
-        <p>
-            &copy; 2019 Horiseon Social Solution Services, Inc.
-        </p>
+    
+        <div class="footer-contact">
+            
+            <div>
+                <ul>
+                    <li>
+                        <a href="tel:+61481873883">+61 481 873 883</a>
+                    </li>
+                    <li>
+                        <a href="mailto:ms.jinhee.lee@gmail.com">ms.jinhee.lee@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/msjinheelee/Week2_Mini_project">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+<div class="footer">
+        
+        
     </div>
     </footer>   
+
+    <p id="footer-copy">
+        &copy; 2022 Jinhee Lee, Bonnyrigg.
+    </p>
+
 </body>
 
 </html>
