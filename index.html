@@ -2,18 +2,16 @@
 WHEN I load their portfolio
 1. THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them  -- yes
 WHEN I click one of the links in the navigation
-2. THEN the UI scrolls to the corresponding section  -- no
-WHEN I click on the link to the section about their work
-3. THEN the UI scrolls to a section with titled images of the developer's applications  -- ??
+2. THEN the UI scrolls to the corresponding section  -- yes
+WHEN I click on the link to the section about their work 
+3. THEN the UI scrolls to a section with titled images of the developer's applications -- yes
 WHEN I am presented with the developer's first application
-4. THEN that application's image should be larger in size than the others  --??
+4. THEN that application's image should be larger in size than the others  -- yes
 WHEN I click on the images of the applications
-5.  THEN I am taken to that deployed application
+THEN I am taken to that deployed application
 WHEN I resize the page or view the site on various screens and devices
-6.  THEN I am presented with a responsive layout that adapts to my viewport  -- yes
-
+THEN I am presented with a responsive layout that adapts to my viewport
 ``` -->
-
 
 
 <!DOCTYPE html>
@@ -52,26 +50,42 @@ WHEN I resize the page or view the site on various screens and devices
 
     <main>
         <section>
-        <div class="about-me">
+        <div class="about-me" id="about-me">
             <img src="./assets/images/hero_image_2.png" alt="various analytics" class="hero-image"/>
            
             <h2><u>About Me</u></h2><br>
-            <img src="./assets/images/image-me_1.jpg" alt="photo of me" class="small-photo cord-card">
+            <a href="https://github.com/msjinheelee/Week2_Mini_project"><img src="./assets/images/image-me_1.jpg" alt="photo of me" class="small-photo cord-card"></a>
             <p>Passionate about data storytelling and a true game lover with a wealth of experience in A/B test performance analysis, e-commerce funnel metrics, market research, online user behaviour analysis and global digital operations. </p>
         </div>
         
-        <div class="work">
+        <div class="work" id="work">
             <h2><u>Work</u></h2><br>
         </div>
 
         </section>
+        
         <section class="row justify-center">
-    
+            <div class="card-column-2">
+                <figure class="card code-card">
+                  <h2 class="card-header">Digital Optimisation</h2>
+                  <div class="card-body">
+                    
+                    <a href="https://github.com/msjinheelee/Week2_Mini_project"><p><img src="./assets/images/hero_image_1.png" alt="optimisation chat" class="large-photo"></a><br>
+                    Delivering insights on their performance and providing recommendations based on the statistically significant results as well as the eCommerce funnel analysis</p>
+                  </div>
+                  
+                </figure>
+              </div>
+            </section>
+
+
+              <section class="row justify-center">
           <div class="card-column">
             <figure class="card code-card">
               <h2 class="card-header">A/B test</h2>
               <div class="card-body">
-                <p>Managed Online Sales A/B test projects end-to-end, resulting in a 31% uplift in the baseline conversion rate across 61 A/B experiments in a fiscal year.</p>
+                <a href="https://github.com/msjinheelee/Week2_Mini_project"><p><img src="./assets/images/brand-awareness.png" alt="optimisation chat" class="medium-photo"></a><br>
+                    Managed Online Sales A/B test projects end-to-end, resulting in a 31% uplift in the baseline conversion rate across 61 A/B experiments in a fiscal year.</p>
               </div>
               
             </figure>
@@ -82,7 +96,8 @@ WHEN I resize the page or view the site on various screens and devices
             <figure class="card code-card">
               <h2 class="card-header">E-Commerce</h2>
               <div class="card-body">
-                <p>Developed the online sales funnel metrics and attain a wealth of knowledge in online user behavior.</p>
+                <a href="https://github.com/msjinheelee/Week2_Mini_project"><p><img src="./assets/images/cost-management.png" alt="optimisation chat" class="medium-photo"></a><br>
+                    Developed the online sales funnel metrics and attain a wealth of knowledge in online user behavior.</p>
               </div>
               
             </figure>
@@ -92,7 +107,8 @@ WHEN I resize the page or view the site on various screens and devices
             <figure class="card code-card">
               <h2 class="card-header">User Behaviour</h2>
               <div class="card-body">
-                <p>Established and host a weekly forum ‘Behavioural Economics Academy’, showcasing various live and planned experiments across the businesses. </p>
+                <a href="https://github.com/msjinheelee/Week2_Mini_project"><p><img src="./assets/images/lead-generation.png" alt="optimisation chat" class="medium-photo"></a><br>
+                    Established and host a weekly forum ‘Behavioural Economics Academy’, showcasing various live and planned experiments across the businesses. </p>
               </div>
               
             </figure>
@@ -105,8 +121,13 @@ WHEN I resize the page or view the site on various screens and devices
 
     <footer>
     
-        <div class="footer-contact">
+        <div id="footer-contact">
+            <h2><u>Contact Me</u></h2><br>
+        </div>
+
+        <div class="footer-contact" >
             
+
             <div>
                 <ul>
                     <li>

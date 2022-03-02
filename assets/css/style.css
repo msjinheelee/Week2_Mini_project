@@ -63,6 +63,23 @@ body {
     width: 150px;
 }
 
+.medium-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+
+}
+
+.large-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+   
+}
+
+
 a {
     color: #ffffff;
     text-decoration: none;
@@ -250,6 +267,12 @@ footer {
     margin-bottom: 1.5rem;
   }
   
+  .card-column-2 {
+    padding: 2rem;
+    flex: 1 0 100%;
+    height: 400px;
+  }
+
   /* make each code card a flexbox column to align and justify content within it */
   .code-card {
     display: flex;
@@ -280,7 +303,7 @@ footer {
     transition: all 0.5s ease-in-out;
   }
   
-  .code-card .card-contents {
+  .code-card {
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -311,6 +334,13 @@ footer {
     box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
   }
   
+  .small-photo:hover,
+  .medium-photo:hover,
+  .large-photo:hover {
+    box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
+  }
+  
+
   /* each card's code block grows to the height of the largest code block on the page, making each card even in height */
   .code-card .code-block {
     flex-grow: 1;
