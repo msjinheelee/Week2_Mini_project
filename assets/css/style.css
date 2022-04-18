@@ -80,15 +80,6 @@ body {
 }
 
 
-a {
-    line-break: loose;
-    color: var(--heliotrope);
-    font-size: 16px;
-    margin: auto;
-    text-align: end;
-    
-}
-
 p {
     font-size: 16px;
 }
@@ -129,13 +120,21 @@ p {
 
 }
 
+
+#homework-links {
+ font-size: 16px;
+ line-height: 1.6 ;
+ color: #e866ec
+}
+
 footer ul {
     width: 100%;
     margin: 0;
     padding: 0;
 }
 footer li {
-    list-style-type: none;
+  font-size: 16px;  
+  list-style-type: none;
     display: inline-block;
     padding-right: 10%;
     width: auto;
@@ -339,7 +338,6 @@ footer {
   }
   
   .small-photo:hover,
-  .medium-photo:hover,
   .large-photo:hover {
     box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
   }
