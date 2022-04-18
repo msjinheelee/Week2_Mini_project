@@ -81,8 +81,12 @@ body {
 
 
 a {
-    color: #ffffff;
-    text-decoration: none;
+    line-break: loose;
+    color: var(--heliotrope);
+    font-size: 16px;
+    margin: auto;
+    text-align: end;
+    
 }
 
 p {
